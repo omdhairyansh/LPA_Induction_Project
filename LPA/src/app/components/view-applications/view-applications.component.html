@@ -1,0 +1,34 @@
+<div class="container">
+  <h1>View Applications</h1>
+  <p>You can view the applications here:</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Application ID</th>
+        <th>Applicant Name</th>
+        <th>Submitted Date</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of applications">
+        <td>
+          <!-- <a [routerLink]="['/view-ind-application', user.id]" -->
+          <a href="javascript:void(0)" (click)="navigateToApplication(user.id)"
+            >{{ user.id }}
+          </a>
+        </td>
+        <td>{{ user.applicantName }}</td>
+        <td>{{ user.submittedDate }}</td>
+        <td *ngIf="user.applicationStatus != null; else nonNullOption">
+          <!-- <td> -->
+          {{ user.applicationStatus }}
+        </td>
+        <ng-template #nonNullOption>
+          <td>In Progress</td>
+        </ng-template>
+      </tr>
+    </tbody>
+  </table>
+  <button (click)="goBack()">Back</button>
+</div>
