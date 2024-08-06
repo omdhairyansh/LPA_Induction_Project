@@ -1,4 +1,4 @@
-package com.LPA_BE.LoanProcessinfApplication;
+package com.LPA_BE.LoanProcessingApplication;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
