@@ -174,7 +174,7 @@ export class SubmitLoanComponent {
     return user;
   }
   onBack(): void {
-    this.router.navigateByUrl("/view-applied-applications"); // Or any other route to navigate back
+    this.router.navigateByUrl("/"); // Or any other route to navigate back
   }
   onSubmit(): void {
     if (this.formData.valid) {

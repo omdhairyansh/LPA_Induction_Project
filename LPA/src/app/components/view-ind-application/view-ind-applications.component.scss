@@ -1,14 +1,24 @@
 .container {
   font-family: "Montserrat", sans-serif;
-  width: 80%;
+  width: 100%;
   padding: 1em;
   box-sizing: border-box;
-  margin: 0 auto; /* Center the container */
+  background-color: #e9f5e9;
+}
+
+form {
+  margin-left: 9%;
+  width: 80%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 1em;
+  margin-bottom: 1em;
+  background-color: #f9f9f9;
 }
 
 h2 {
   background-color: #e9f5e9;
-  padding: 0.5em;
+  padding-top: 0.5 em;
   font-family: "Montserrat", sans-serif;
   text-align: center;
   font-weight: bold;
@@ -17,6 +27,7 @@ h2 {
 }
 
 p {
+  padding-left: 11em;
   font-family: "Montserrat", sans-serif;
   text-align: left;
   font-weight: bold;
@@ -29,6 +40,7 @@ fieldset {
   padding: 1em;
   margin-bottom: 1em;
   background-color: #f9f9f9;
+  
 }
 
 legend {

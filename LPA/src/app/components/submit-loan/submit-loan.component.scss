@@ -1,9 +1,9 @@
 .container {
   font-family: "Montserrat", sans-serif;
-  width: 80%;
+  width: 100%;
   padding: 1em;
   box-sizing: border-box;
-  margin: 0 auto; /* Center the container */
+  background-color: #e9f5e9;
 }
 h2 {
   background-color: #e9f5e9;
@@ -17,6 +17,8 @@ h2 {
 }
 
 form {
+  margin-left: 9%;
+  width: 80%;
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 1em;
