@@ -153,10 +153,7 @@ public class BusinessLogic {
 
 
         public Double calcScore(Long ssnNumber, Application application) {
-//        Application application = applicationRepository.findBySsnNumber(ssnNumber).orElseThrow();
         BureauData bureauData = bureaDataRepository.getById(ssnNumber);
-//        Application application = applicationRepository.getById(id);
-        //
         double loanAmount = application.getLoanAmount();
         double workExperienceYear = application.getworkExperienceYears();
         double annualSalary = application.getAnnualSalary();
@@ -244,9 +241,7 @@ public class BusinessLogic {
                 + (-6.5223 * multipleInquiriesLast6mths)
                 + (-0.2743 * purposeBinary)
                 + (desc_value);
-        //
         double p = 1 / (1 + Math.exp(-logitP));
-        //
         String status = p >= 0.5 ? "Approved" : "Declined";
         String reason = status == "Declined" ? "Low Credit Score" : "None";
         double creditScore = (p)*(1000.0);

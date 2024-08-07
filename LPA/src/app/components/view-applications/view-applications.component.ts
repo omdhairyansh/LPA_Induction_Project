@@ -44,6 +44,6 @@ export class ViewAllApplicationsComponent {
     this.router.navigate(["/"]);
   }
   navigateToApplication(id: number) {
-    this.router.navigate(["/view-ind-application", id]);
+    this.router.navigate(["/view-application", id]);
   }
 }

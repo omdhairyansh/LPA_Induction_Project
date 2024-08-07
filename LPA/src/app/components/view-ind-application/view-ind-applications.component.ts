@@ -99,6 +99,10 @@ export class ViewSingleApplicationComponent implements OnInit {
 
     console.log("user-out", this.user); // this doesn't gets printed properly 😢
   }
+  
+  onBack(): void {
+    this.router.navigateByUrl("/view-applied-applications"); // Or any other route to navigate back
+  }
 
   populateForm(): void {
     this.formData = new FormGroup({
@@ -129,97 +133,6 @@ export class ViewSingleApplicationComponent implements OnInit {
       employerCity: new FormControl(this.user.employerCity),
       employerState: new FormControl(this.user.employerState),
       employerPostalCode: new FormControl(this.user.employerPostalCode),
-
-      // middleName: [{ value: this.user.middleName, disabled: true }],
-      // lastName: [{ value: this.user.lastName, disabled: true }],
-      // dateOfBirth: [{ value: this.user.dateOfBirth, disabled: true }],
-      // maritalStatus: [{ value: this.user.maritalStatus, disabled: true }],
-      // ssnNumber: [{ value: this.user.ssnNumber, disabled: true }],
-      // loanAmount: [{ value: this.user.loanAmount, disabled: true }],
-      // loanPurpose: [{ value: this.user.loanPurpose, disabled: true }],
-      // description: [{ value: this.user.description, disabled: true }],
-      // addressLine1: [{ value: this.user.addressLine1, disabled: true }],
-      // addressLine2: [{ value: this.user.addressLine2, disabled: true }],
-      // city: [{ value: this.user.city, disabled: true }],
-      // state: [{ value: this.user.state, disabled: true }],
-      // postalCode: [{ value: this.user.postalCode, disabled: true }],
-      // homePhone: [{ value: this.user.homePhone, disabled: true }],
-      // officePhone: [{ value: this.user.officePhone, disabled: true }],
-      // mobile: [{ value: this.user.mobile, disabled: true }],
-      // email: [{ value: this.user.email, disabled: true }],
-      // employerName: [{ value: this.user.employerName, disabled: true }],
-      // annualSalary: [{ value: this.user.annualSalary, disabled: true }],
-      // workExperienceYears: [{ value: this.user.workExperienceYears, disabled: true }],
-      // workExperienceMonths: [{ value: this.user.workExperienceMonths, disabled: true }],
-      // designation: [{ value: this.user.designation, disabled: true }],
-      // employerAddress: [{ value: this.user.employerAddress, disabled: true }],
-      // employerCity: [{ value: this.user.employerCity, disabled: true }],
-      // employerState: [{ value: this.user.employerState, disabled: true }],
-      // employerPostalCode: [{ value: this.user.employerPostalCode, disabled: true }],
     });
   }
-
-  // userToFormData(user: User): any {
-  //   return {
-  //     firstName: user.firstName,
-  //     middleName: user.middleName,
-  //     lastName: user.lastName,
-  //     dateOfBirth: user.dateOfBirth,
-  //     maritalStatus: user.maritalStatus,
-  //     ssnNumber: user.ssnNumber,
-  //     loanAmount: user.loanAmount,
-  //     loanPurpose: user.loanPurpose,
-  //     description: user.description,
-  //     addressLine1: user.addressLine1,
-  //     addressLine2: user.addressLine2,
-  //     city: user.city,
-  //     state: user.state,
-  //     postalCode: user.postalCode,
-  //     homePhone: user.homePhone,
-  //     officePhone: user.officePhone,
-  //     mobile: user.mobile,
-  //     email: user.email,
-  //     employerName: user.employerName,
-  //     annualSalary: user.annualSalary,
-  //     workExperienceYears: user.workExperienceYears,
-  //     workExperienceMonths: user.workExperienceMonths,
-  //     designation: user.designation,
-  //     employerAddress: user.employerAddress,
-  //     employerCity: user.employerCity,
-  //     employerState: user.employerState,
-  //     employerPostalCode: user.employerPostalCode,
-  // }
-  // }
 }
-
-/*
-        this.formData = new FormGroup({
-          firstName: new FormControl(response.firstName, ),
-          middleName: new FormControl(response.middleName,),
-          lastName: new FormControl(response.lastName, ),
-          dateOfBirth: new FormControl(response.dateOfBirth, ),
-          maritalStatus: new FormControl(response.maritalStatus, ),
-          ssnNumber: new FormControl(response.ssnNumber,),
-          loanAmount: new FormControl(response.loanAmount, ),
-          loanPurpose: new FormControl(response.loanPurpose, ),
-          description: new FormControl(response.description,),
-          addressLine1: new FormControl(response.addressLine1, ),
-          addressLine2: new FormControl(response.addressLine2,),
-          city: new FormControl(response.city, ),
-          state: new FormControl(response.state, ),
-          postalCode: new FormControl(response.postalCode, ),
-          homePhone: new FormControl(response.homePhone, ),
-          officePhone: new FormControl(response.officePhone, ),
-          mobile: new FormControl(response.mobile, ),
-          email: new FormControl(response.email,),
-          employerName: new FormControl(response.employerName, ),
-          annualSalary: new FormControl(response.annualSalary, ),
-          workExperienceYears: new FormControl(response.workExperienceYears, ),
-          workExperienceMonths: new FormControl(response.workExperienceMonths, ),
-          designation: new FormControl(response.designation, ),
-          employerAddress: new FormControl(response.employerAddress),
-          submittedDate: new FormControl(response.submittedDate),
-          // score: response.score,
-          // declineReason: response.declineReason,
-        });
-        */

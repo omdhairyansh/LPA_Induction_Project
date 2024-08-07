@@ -173,6 +173,9 @@ export class SubmitLoanComponent {
     };
     return user;
   }
+  onBack(): void {
+    this.router.navigateByUrl("/view-applied-applications"); // Or any other route to navigate back
+  }
   onSubmit(): void {
     if (this.formData.valid) {
       let user = this.formDataToUser(this.formData);
@@ -203,7 +206,7 @@ export class SubmitLoanComponent {
         alert(
           "Application declined: Applicant’s age must be between 18 and 65."
         );
-        this.router.navigateByUrl("/submit-loan");
+        this.router.navigateByUrl("/apply-loan");
         return;
       }
 
@@ -211,7 +214,7 @@ export class SubmitLoanComponent {
         alert(
           "Application declined: Applicant’s work experience must be at least 6 months."
         );
-        this.router.navigateByUrl("/submit-loan");
+        this.router.navigateByUrl("/apply-loan");
 
         return;
       }
@@ -220,7 +223,7 @@ export class SubmitLoanComponent {
         alert(
           "Application declined: Applicant’s annual salary must be at least $10,000."
         );
-        this.router.navigateByUrl("/submit-loan");
+        this.router.navigateByUrl("/apply-loan");
         return;
       }
       /* post request to submit form */
@@ -229,7 +232,7 @@ export class SubmitLoanComponent {
           console.log(response);
           alert("Form submitted successfully");
 
-          this.router.navigateByUrl("/success-page");
+          this.router.navigateByUrl("/application-submitted");
         },
         (error) => {
           console.log(error);

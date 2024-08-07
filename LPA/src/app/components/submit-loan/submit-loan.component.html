@@ -1,7 +1,7 @@
 <div class="container">
   <h2>Submit New Application</h2>
   <form [formGroup]="formData" (ngSubmit)="onSubmit()">
-    <div class="section">
+    <div class="personal">
       <h3>Personal Information</h3>
       <label for="firstName">First Name*</label>
       <input
@@ -182,7 +182,7 @@
 
     <!-- Address Section -->
 
-    <div class="section">
+    <div class="address">
       <h3>Address</h3>
       <label for="addressLine1">Address Line 1*</label>
       <input
@@ -287,7 +287,7 @@
     </div>
 
     <!-- Contact Info -->
-    <div class="section">
+    <div class="contact">
       <h3>Contact Information</h3>
 
       <label for="homePhone">Home Phone*</label>
@@ -377,7 +377,7 @@
 
     <!-- Employment Details -->
 
-    <div class="section">
+    <div class="employement">
       <h3>Employment Details</h3>
 
       <label for="employerName">Employer Name*</label>
@@ -578,8 +578,8 @@
       </div>
     </div>
     <div class="buttons">
-      <button type="submit">Submit</button>
-      <button type="cancel" routerLink="/">Cancel</button>
+      <button class="submit" type="submit">Submit</button>
+      <button type="back-button" (click)="onBack()">Back</button>
     </div>
   </form>
 </div>

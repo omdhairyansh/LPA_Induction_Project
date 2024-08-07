@@ -2,12 +2,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ABC Bank Loan Processing Application</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
   <link rel="stylesheet" href="home.component.scss" />
 </head>
+
 <body>
   <div class="container">
     <div class="header">
-      <!-- <img src="" alt="ABC Bank Logo" class="logo" /> -->
       <h1>ABC BANK</h1>
       <p>Loan Processing Application</p>
     </div>
@@ -16,32 +20,23 @@
       <h2>Welcome to ABC Bank Loan Processing System</h2>
       <p>Now Get your Loan Approved instantly!!!</p>
       <p>
-        Your loan approved immediately using this cool and fully automated
+        Your loan is approved immediately using this cool and fully automated
         application.
       </p>
       <p>
-        In order to Submit a new loan request, click on "Submit an application"
-        on the right.
+        To submit a new loan request, click on "Submit an application".
       </p>
       <p>
-        For viewing existing loan application's, click on "View applications".
+        To view existing loan applications, click on "View applications".
       </p>
     </div>
     <div class="buttons">
-      <button routerLink="/submit-loan">Submit an Application</button>
-      <button routerLink="/view-all-applications">View Applications</button>
+      <button routerLink="/apply-loan">
+        <i class="fas fa-file-alt"></i> Submit an Application
+      </button>
+      <button routerLink="/view-applied-applications">
+        <i class="fas fa-eye"></i> View Applications
+      </button>
     </div>
   </div>
-  <script>
-    function submitApplication() {
-      // Add your code for submitting an application here
-      this.router.navigateByUrl("/submit-loan");
-    }
-
-    function viewApplications() {
-      // Add your code for viewing applications here
-    }
-  </script>
 </body>
-
-<!-- <h1> Home Works!</h1> -->

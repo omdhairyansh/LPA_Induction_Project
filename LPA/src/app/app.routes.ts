@@ -11,19 +11,19 @@ export const routes: Routes = [
   { path: "", component: HomeComponent },
   { path: "home", component: HomeComponent },
   {
-    path: "submit-loan",
+    path: "apply-loan",
     component: SubmitLoanComponent,
   },
   {
-    path: "view-all-applications",
+    path: "view-applied-applications",
     component: ViewAllApplicationsComponent,
   },
   {
-    path: "success-page",
+    path: "application-submitted",
     component: SuccessPageComponent,
   },
   {
-    path: "view-ind-application/:id",
+    path: "view-application/:id",
     component: ViewSingleApplicationComponent,
   },
 ];

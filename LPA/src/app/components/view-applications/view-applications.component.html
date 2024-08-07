@@ -1,6 +1,6 @@
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet"/>
 <div class="container">
   <h1>View Applications</h1>
-  <p>You can view the applications here:</p>
   <table>
     <thead>
       <tr>
@@ -8,27 +8,23 @@
         <th>Applicant Name</th>
         <th>Submitted Date</th>
         <th>Status</th>
+        <th>Details</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let user of applications">
-        <td>
-          <!-- <a [routerLink]="['/view-ind-application', user.id]" -->
-          <a href="javascript:void(0)" (click)="navigateToApplication(user.id)"
-            >{{ user.id }}
-          </a>
-        </td>
+        <td> {{ user.id }} </td>
         <td>{{ user.applicantName }}</td>
         <td>{{ user.submittedDate }}</td>
         <td *ngIf="user.applicationStatus != null; else nonNullOption">
-          <!-- <td> -->
           {{ user.applicationStatus }}
         </td>
         <ng-template #nonNullOption>
           <td>In Progress</td>
         </ng-template>
+        <td><button class="view-button" (click)="navigateToApplication(user.id)">View Details</button></td>
       </tr>
     </tbody>
   </table>
-  <button (click)="goBack()">Back</button>
+  <button class="back-button" (click)="goBack()">Back</button>
 </div>
