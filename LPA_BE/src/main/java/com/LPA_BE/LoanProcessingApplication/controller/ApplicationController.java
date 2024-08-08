@@ -16,7 +16,7 @@ import java.util.List;
 
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
-@RequestMapping("/api/loan_applicants")
+@RequestMapping("/api/applications")
 //@Component
 public class ApplicationController {
 

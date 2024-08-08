@@ -511,28 +511,6 @@
         >
       </div>
 
-      <label for="employerState">Employer - State*</label>
-      <input
-        type="text"
-        name="employerState"
-        id="employerState"
-        formControlName="employerState"
-        placeholder="State"
-      />
-      <div
-        *ngIf="
-          formData.get('employerState')?.invalid &&
-          formData.get('employerState')?.touched
-        "
-      >
-        <small *ngIf="formData.get('employerState')?.errors?.['required']"
-          >Employer State is required.</small
-        >
-        <small *ngIf="formData.get('employerState')?.errors?.['maxLength']"
-          >Maximum length is 255.</small
-        >
-      </div>
-
       <label for="employerCity">Employer - City*</label>
       <input
         type="text"
@@ -551,6 +529,28 @@
           >Employer City is required.</small
         >
         <small *ngIf="formData.get('employerCity')?.errors?.['maxLength']"
+          >Maximum length is 255.</small
+        >
+      </div>
+      
+      <label for="employerState">Employer - State*</label>
+      <input
+        type="text"
+        name="employerState"
+        id="employerState"
+        formControlName="employerState"
+        placeholder="State"
+      />
+      <div
+        *ngIf="
+          formData.get('employerState')?.invalid &&
+          formData.get('employerState')?.touched
+        "
+      >
+        <small *ngIf="formData.get('employerState')?.errors?.['required']"
+          >Employer State is required.</small
+        >
+        <small *ngIf="formData.get('employerState')?.errors?.['maxLength']"
           >Maximum length is 255.</small
         >
       </div>

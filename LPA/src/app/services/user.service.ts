@@ -16,14 +16,14 @@ export class UserService {
   // api call to send an application:
   public addUser(user: User): Observable<User> {
     return this.http.post<User>(
-      `${this.apiServerUrl}/api/loan_applicants`,
+      `${this.apiServerUrl}/api/applications`,
       user
     );
   }
   // api call for all applications :
   public getAllAplications(): Observable<Application[]> {
     return this.http.get<Application[]>(
-      `${this.apiServerUrl}/api/loan_applicants/view_apps`
+      `${this.apiServerUrl}/api/applications/view_apps`
     );
   }
 
@@ -31,7 +31,7 @@ export class UserService {
 
   public getSingleApplication(id: number): Observable<User> {
     return this.http.get<User>(
-      `${this.apiServerUrl}/api/loan_applicants/view_application/${id}`
+      `${this.apiServerUrl}/api/applications/view_application/${id}`
     );
   }
 }
